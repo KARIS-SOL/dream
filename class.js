@@ -63,12 +63,22 @@ class Shape {
   }
 }
 
+// 상속
 class Rectangle extends Shape {}
-class Triangle extends Shape {}
+
+// 다양성
+class Triangle extends Shape {
+  getArea() {
+    return (this.width * this.height) / 2;
+  }
+}
 
 const rectangle = new Rectangle(20, 20, "blue");
 rectangle.draw();
 // drawing blue color of
+console.log(rectangle.getArea()); // 400
+
 const triangle = new Triangle(20, 20, "red");
 triangle.draw();
 // drawing red color of
+console.log(triangle.getArea()); // 200
