@@ -68,6 +68,10 @@ class Rectangle extends Shape {}
 
 // 다양성
 class Triangle extends Shape {
+  draw() {
+    super.draw();
+    console.log("🔺");
+  }
   getArea() {
     return (this.width * this.height) / 2;
   }
@@ -82,3 +86,10 @@ const triangle = new Triangle(20, 20, "red");
 triangle.draw();
 // drawing red color of
 console.log(triangle.getArea()); // 200
+
+// 4. Class checking: instanceof
+console.log(rectangle instanceof Rectangle);
+console.log(triangle instanceof Rectangle);
+console.log(triangle instanceof Triangle);
+console.log(triangle instanceof Shape);
+console.log(triangle instanceof Object);
